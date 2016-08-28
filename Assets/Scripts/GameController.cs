@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class GameController : MonoBehaviour
 {
@@ -102,5 +103,11 @@ public class GameController : MonoBehaviour
 				gameOverCanvas.SetActive(true);
 				break;
 		}
+	}
+
+	public void Restart()
+	{
+		//SceneManager.LoadLevel(SceneManager.loadedLevel);
+		SceneManager.LoadScene("Game");
 	}
 }
