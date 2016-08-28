@@ -42,6 +42,7 @@ public class GameController : MonoBehaviour
 	private Text gameOverBestText;
 
 	private State state;
+	private int best;
 
 	void Start ()
 	{
@@ -53,6 +54,8 @@ public class GameController : MonoBehaviour
 		gameOverBestText = gameOverCanvas.transform.FindChild("Best").gameObject.GetComponent<Text>();
 
 		state = State.Tutorial;
+
+		best = PlayerPrefs.GetInt("Best", 0);
 	}
 	
 	void Update ()
@@ -92,6 +95,14 @@ public class GameController : MonoBehaviour
 				var score = birdController.GetScore();
 				scoreText.text = score.ToString();
 				gameOverScoreText.text = score.ToString();
+
+				if (score > best)
+				{
+					best = score;
+					PlayerPrefs.SetInt("Best", best);
+				}
+
+				gameOverBestText.text = best.ToString();
 
 				if (!birdController.IsAlive())
 					state = State.Death;

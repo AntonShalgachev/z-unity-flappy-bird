@@ -21,13 +21,13 @@ public class BirdController : MonoBehaviour
 	private int score = 0;
 
 	private Animator animator;
-	private AudioSource audio;
+	private AudioSource audioSource;
 
 	void Start()
 	{
 		birdBody = GetComponent<Rigidbody2D>();
 		animator = GetComponent<Animator>();
-		audio = GetComponent<AudioSource>();
+		audioSource = GetComponent<AudioSource>();
 	}
 
 	void Update()
@@ -48,7 +48,7 @@ public class BirdController : MonoBehaviour
 		{
 			Debug.Log("Entered trigger: " + collider);
 			score++;
-			audio.PlayOneShot(scoreClip);
+			audioSource.PlayOneShot(scoreClip);
 		}
 	}
 
@@ -60,8 +60,8 @@ public class BirdController : MonoBehaviour
 			alive = false;
 			gameObject.layer = LayerMask.NameToLayer("DeadBird");
 			animator.SetTrigger("BirdDeath");
-			audio.PlayOneShot(deathClip);
-			audio.PlayOneShot(fallClip);
+			audioSource.PlayOneShot(deathClip);
+			audioSource.PlayOneShot(fallClip);
 		}
 	}
 
@@ -76,7 +76,7 @@ public class BirdController : MonoBehaviour
 
 		birdBody.AddForce(impulse, ForceMode2D.Impulse);
 
-		audio.PlayOneShot(flapClip);
+		audioSource.PlayOneShot(flapClip);
 	}
 
 	public void KeepForwardVelocity(float velocity)
