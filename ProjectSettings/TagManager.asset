@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Pipe
   - Floor
+  - ScoreTrigger
   layers:
   - Default
   - TransparentFX
@@ -17,11 +18,11 @@ TagManager:
   - 
   - Respawnable
   - Respawner
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Bird
+  - DeadBird
+  - Pipe
+  - ScoreTrigger
+  - ObjectDestroyer
   - 
   - 
   - 

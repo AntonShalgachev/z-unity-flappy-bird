@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 27cf6807f3f4fad428b5ade73f111f17
-timeCreated: 1472291107
+timeCreated: 1472329307
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -10,48 +10,49 @@ TextureImporter:
     21300006: PipeBottom
     21300008: Score
     21300010: BirdUp
-    21300012: PauseButton
+    21300012: ButtonPause
     21300014: flappy_11
     21300016: BirdMiddle
-    21300018: PlayButton
-    21300020: flappy_14
+    21300018: ButtonPlay
+    21300020: Digit0
     21300022: flappy_15
     21300024: BirdDown
-    21300026: MenuButton
-    21300028: flappy_19
-    21300030: OkButton
-    21300032: flappy_22
+    21300026: ButtonMenu
+    21300028: Digit1
+    21300030: ButtonOk
+    21300032: Digit2
     21300034: flappy_23
     21300036: flappy_25
     21300038: TapToFlap
-    21300040: flappy_28
-    21300042: flappy_29
+    21300040: ButtonRate
+    21300042: Digit3
     21300044: flappy_30
     21300046: FlappyBirdLogo
-    21300048: flappy_33
-    21300050: flappy_34
+    21300048: ButtonScore
+    21300050: Digit4
     21300052: flappy_35
-    21300054: flappy_36
+    21300054: Digit5
     21300056: GameOver
-    21300058: flappy_39
+    21300058: ButtonShare
     21300060: flappy_40
     21300062: flappy_41
-    21300064: flappy_42
+    21300064: ButtonStart
     21300066: flappy_43
     21300068: flappy_44
     21300070: GetReady
     21300072: flappy_47
     21300074: flappy_48
     21300076: flappy_49
-    21300078: flappy_50
-    21300080: flappy_51
-    21300082: flappy_52
-    21300084: flappy_53
-    21300086: flappy_54
+    21300078: New
+    21300080: Digit6
+    21300082: Digit7
+    21300084: Digit8
+    21300086: Digit9
     21300088: flappy_55
     21300090: flappy_56
     21300092: flappy_57
     21300094: flappy_58
+    21300096: flappy_0
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -179,7 +180,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: PauseButton
+      name: ButtonPause
       rect:
         serializedVersion: 2
         x: 287
@@ -218,7 +219,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: PlayButton
+      name: ButtonPlay
       rect:
         serializedVersion: 2
         x: 287
@@ -231,7 +232,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: flappy_14
+      name: Digit0
       rect:
         serializedVersion: 2
         x: 288
@@ -270,7 +271,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: MenuButton
+      name: ButtonMenu
       rect:
         serializedVersion: 2
         x: 246
@@ -283,12 +284,12 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: flappy_19
+      name: Digit1
       rect:
         serializedVersion: 2
-        x: 291
+        x: 290
         y: 128
-        width: 5
+        width: 7
         height: 10
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -296,7 +297,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: OkButton
+      name: ButtonOk
       rect:
         serializedVersion: 2
         x: 246
@@ -309,7 +310,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: flappy_22
+      name: Digit2
       rect:
         serializedVersion: 2
         x: 289
@@ -361,7 +362,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: flappy_28
+      name: ButtonRate
       rect:
         serializedVersion: 2
         x: 246
@@ -374,13 +375,13 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: flappy_29
+      name: Digit3
       rect:
         serializedVersion: 2
         x: 289
-        y: 87
+        y: 96
         width: 7
-        height: 19
+        height: 10
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -413,7 +414,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: flappy_33
+      name: ButtonScore
       rect:
         serializedVersion: 2
         x: 244
@@ -426,7 +427,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: flappy_34
+      name: Digit4
       rect:
         serializedVersion: 2
         x: 287
@@ -452,7 +453,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: flappy_36
+      name: Digit5
       rect:
         serializedVersion: 2
         x: 287
@@ -478,7 +479,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: flappy_39
+      name: ButtonShare
       rect:
         serializedVersion: 2
         x: 242
@@ -517,7 +518,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: flappy_42
+      name: ButtonStart
       rect:
         serializedVersion: 2
         x: 242
@@ -608,7 +609,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: flappy_50
+      name: New
       rect:
         serializedVersion: 2
         x: 146
@@ -621,7 +622,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: flappy_51
+      name: Digit6
       rect:
         serializedVersion: 2
         x: 165
@@ -634,7 +635,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: flappy_52
+      name: Digit7
       rect:
         serializedVersion: 2
         x: 175
@@ -647,7 +648,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: flappy_53
+      name: Digit8
       rect:
         serializedVersion: 2
         x: 185
@@ -660,7 +661,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: flappy_54
+      name: Digit9
       rect:
         serializedVersion: 2
         x: 195
@@ -718,6 +719,19 @@ TextureImporter:
         x: 228
         y: 4
         width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: flappy_0
+      rect:
+        serializedVersion: 2
+        x: 291
+        y: 87
+        width: 3
         height: 7
       alignment: 0
       pivot: {x: 0.5, y: 0.5}

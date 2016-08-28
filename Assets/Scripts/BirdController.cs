@@ -11,6 +11,8 @@ public class BirdController : MonoBehaviour
 	private float velocity;
 
 	private Rigidbody2D birdBody;
+	private bool alive = true;
+	private int score = 0;
 
 	void Start()
 	{
@@ -19,6 +21,9 @@ public class BirdController : MonoBehaviour
 
 	void Update()
 	{
+		if (!alive)
+			return;
+
 		if (Input.GetMouseButtonDown(0))
 		{
 			Vector2 impulse = new Vector2(0.0f, flapImpulse);
@@ -33,5 +38,34 @@ public class BirdController : MonoBehaviour
 
 		if (birdBody.velocity.x < velocity)
 			birdBody.AddForce(new Vector2(forwardForce, 0.0f));
+	}
+
+	void OnTriggerEnter2D(Collider2D collider)
+	{
+		if (collider.tag == "ScoreTrigger")
+		{
+			Debug.Log("Entered trigger: " + collider);
+			score++;
+		}
+	}
+
+	void OnCollisionEnter2D(Collision2D collision)
+	{
+		if (alive)
+		{
+			Debug.Log("Bird collided with " + collision.collider);
+			alive = false;
+			gameObject.layer = LayerMask.NameToLayer("DeadBird");
+		}
+	}
+
+	public bool IsAlive()
+	{
+		return alive;
+	}
+
+	public int GetScore()
+	{
+		return score;
 	}
 }
