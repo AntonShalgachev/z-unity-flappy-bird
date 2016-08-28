@@ -7,16 +7,17 @@ public class BirdController : MonoBehaviour
 	private float flapImpulse;
 	[SerializeField]
 	private float forwardForce;
-	//[SerializeField]
-	//private float velocity;
 
 	private Rigidbody2D birdBody;
 	private bool alive = true;
 	private int score = 0;
 
+	private Animator animator;
+
 	void Start()
 	{
 		birdBody = GetComponent<Rigidbody2D>();
+		animator = GetComponent<Animator>();
 	}
 
 	void Update()
@@ -47,6 +48,7 @@ public class BirdController : MonoBehaviour
 			Debug.Log("Bird collided with " + collision.collider);
 			alive = false;
 			gameObject.layer = LayerMask.NameToLayer("DeadBird");
+			animator.SetTrigger("BirdDeath");
 		}
 	}
 

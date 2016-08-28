@@ -107,7 +107,6 @@ public class GameController : MonoBehaviour
 
 	public void Restart()
 	{
-		//SceneManager.LoadLevel(SceneManager.loadedLevel);
-		SceneManager.LoadScene("Game");
+		SceneManager.LoadScene(SceneManager.GetActiveScene().name);
 	}
 }
