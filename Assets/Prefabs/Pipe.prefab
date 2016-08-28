@@ -20,9 +20,9 @@ GameObject:
   m_Component:
   - 4: {fileID: 4000010156528164}
   - 61: {fileID: 61000012501690950}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: ScoreTrigger
-  m_TagString: Untagged
+  m_TagString: ScoreTrigger
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -56,7 +56,7 @@ GameObject:
   - 4: {fileID: 4000013836205396}
   - 212: {fileID: 212000013153435130}
   - 61: {fileID: 61000014193828642}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: PipeBottom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -73,7 +73,7 @@ GameObject:
   - 4: {fileID: 4000011645710092}
   - 212: {fileID: 212000013863617754}
   - 61: {fileID: 61000012367710804}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: PipeTop
   m_TagString: Untagged
   m_Icon: {fileID: 0}

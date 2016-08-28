@@ -7,8 +7,8 @@ public class BirdController : MonoBehaviour
 	private float flapImpulse;
 	[SerializeField]
 	private float forwardForce;
-	[SerializeField]
-	private float velocity;
+	//[SerializeField]
+	//private float velocity;
 
 	private Rigidbody2D birdBody;
 	private bool alive = true;
@@ -24,20 +24,11 @@ public class BirdController : MonoBehaviour
 		if (!alive)
 			return;
 
-		if (Input.GetMouseButtonDown(0))
-		{
-			Vector2 impulse = new Vector2(0.0f, flapImpulse);
+		//if (Input.GetMouseButtonDown(0))
+		//	Flap();
 
-			var vel = birdBody.velocity;
-			var targetVel = new Vector2(vel.x, 0.0f);
-			if (vel.y < 0.0f)
-				impulse += birdBody.mass * (targetVel - vel);
-
-			birdBody.AddForce(impulse, ForceMode2D.Impulse);
-		}
-
-		if (birdBody.velocity.x < velocity)
-			birdBody.AddForce(new Vector2(forwardForce, 0.0f));
+		//if (birdBody.velocity.x < velocity)
+		//	birdBody.AddForce(new Vector2(forwardForce, 0.0f));
 	}
 
 	void OnTriggerEnter2D(Collider2D collider)
@@ -57,6 +48,24 @@ public class BirdController : MonoBehaviour
 			alive = false;
 			gameObject.layer = LayerMask.NameToLayer("DeadBird");
 		}
+	}
+
+	public void Flap()
+	{
+		Vector2 impulse = new Vector2(0.0f, flapImpulse);
+
+		var vel = birdBody.velocity;
+		var targetVel = new Vector2(vel.x, 0.0f);
+		if (vel.y < 0.0f)
+			impulse += birdBody.mass * (targetVel - vel);
+
+		birdBody.AddForce(impulse, ForceMode2D.Impulse);
+	}
+
+	public void KeepForwardVelocity(float velocity)
+	{
+		if (birdBody.velocity.x < velocity)
+			birdBody.AddForce(new Vector2(forwardForce, 0.0f));
 	}
 
 	public bool IsAlive()
