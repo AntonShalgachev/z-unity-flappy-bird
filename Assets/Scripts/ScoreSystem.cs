@@ -8,14 +8,9 @@ public class ScoreSystem : MonoBehaviour
 	private GameObject bird;
 	[SerializeField]
 	private float verticalOffset;
-	//[SerializeField]
-	//private GameObject placeholder;
 
 	private BirdController birdController;
 	private Text scoreText;
-	//private int score = 0;
-	//private int digits = 1;
-	//private ArrayList<GameObject> placeholders;
 
 	void Start ()
 	{
@@ -28,33 +23,7 @@ public class ScoreSystem : MonoBehaviour
 	
 	void Update ()
 	{
-		//var newScore = birdController.GetScore();
-		//var newDigits = Digits(newScore);
-
-		//if (newDigits > digits)
-		//{
-
-		//}
-
 		var score = birdController.GetScore();
 		scoreText.text = score.ToString();
-	}
-
-	int Digits(int val)
-	{
-		Debug.Assert(val >= 0);
-
-		if (val == 0)
-			return 1;
-
-		int digits = 0;
-
-		while(val > 0)
-		{
-			val /= 10;
-			digits++;
-		}
-
-		return digits;
 	}
 }
