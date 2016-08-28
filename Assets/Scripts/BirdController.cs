@@ -7,17 +7,27 @@ public class BirdController : MonoBehaviour
 	private float flapImpulse;
 	[SerializeField]
 	private float forwardForce;
+	[SerializeField]
+	private AudioClip scoreClip;
+	[SerializeField]
+	private AudioClip deathClip;
+	[SerializeField]
+	private AudioClip fallClip;
+	[SerializeField]
+	private AudioClip flapClip;
 
 	private Rigidbody2D birdBody;
 	private bool alive = true;
 	private int score = 0;
 
 	private Animator animator;
+	private AudioSource audio;
 
 	void Start()
 	{
 		birdBody = GetComponent<Rigidbody2D>();
 		animator = GetComponent<Animator>();
+		audio = GetComponent<AudioSource>();
 	}
 
 	void Update()
@@ -38,6 +48,7 @@ public class BirdController : MonoBehaviour
 		{
 			Debug.Log("Entered trigger: " + collider);
 			score++;
+			audio.PlayOneShot(scoreClip);
 		}
 	}
 
@@ -49,6 +60,8 @@ public class BirdController : MonoBehaviour
 			alive = false;
 			gameObject.layer = LayerMask.NameToLayer("DeadBird");
 			animator.SetTrigger("BirdDeath");
+			audio.PlayOneShot(deathClip);
+			audio.PlayOneShot(fallClip);
 		}
 	}
 
@@ -62,6 +75,8 @@ public class BirdController : MonoBehaviour
 			impulse += birdBody.mass * (targetVel - vel);
 
 		birdBody.AddForce(impulse, ForceMode2D.Impulse);
+
+		audio.PlayOneShot(flapClip);
 	}
 
 	public void KeepForwardVelocity(float velocity)
